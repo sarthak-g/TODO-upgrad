@@ -1,4 +1,46 @@
-<h2>FOR LOGIN:-</h2>
+<!-- <h2>FOR LOGIN:-</h2>
 <a href="{% url 'login' %}">CLICK ON THIS</a>
 <h2>FOR SignUp:-</h2>
-<a href="{% url 'signup' %}">CLICK ON THIS</a>
+<a href="{% url 'signup' %}">CLICK ON THIS</a> -->
+
+
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ToDo App</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'todo/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'todo/css/styles.css' %}" />
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<link rel="shortcut icon" type="image/png" href="{% static 'todo/favicon.png' %}"/>
+
+
+
+	</head>
+	<body>
+
+		<div class="container-fluid" id="wrapper">
+
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+<h1 style="color:#C70039;font-weight:bold;">Organize life</h1>
+<h1 style="font-weight:bold;">Then go enjoy it…</h1>
+<p style="color:#474747;font-size:20px;font-weight:20px;">Life can feel overwhelming, but it doesn’t have to.This Todo lets you keep track of everything in one place, so you can get it all done and enjoy more peace of mind along the way.</p>
+<br>
+<button type="button" class="btn btn-light" style="width:200px;font-size:20px;margin-left:30px;"><a href="{% url 'login' %}">Log In</a></button>
+<button type="button" class="btn btn-light" style="width:200px;font-size:20px;margin-left:5px;"><a href="{% url 'signup' %}">Sign Up</a></button>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

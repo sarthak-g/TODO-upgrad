@@ -1,12 +1,9 @@
-<!-- <h1>Log In Page!!!!</h1>
-<form method="POST">
+<!-- <form method='POST'>
   {% csrf_token %}
   {{form.as_p}}
   <button type="submit">Submit</button>
+
 </form> -->
-
-
-
 {% load staticfiles %}
 {% load static %}
 <!DOCTYPE html>
@@ -33,8 +30,15 @@
         border-radius:5px;
 
       }
-      #id_password{
+      #id_password1{
         margin-left:7px;
+        font-size:20px;
+        color:red;
+        border-radius:5px;
+
+      }
+      #id_password2{
+        margin-left:20px;
         font-size:20px;
         color:red;
         border-radius:5px;
@@ -45,6 +49,10 @@
         font-size:25px;
         color:inherit;
       }
+      #id_password2 > span{
+        margin-top:10px;
+
+      }
       </style>
 
 	</head>
@@ -54,11 +62,11 @@
 
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
-<h1 style="color:#C70039;font-weight:bold;">LogIn Here</h1>
+<h1 style="color:#C70039;font-weight:bold;">SignUp Here</h1>
 <form method="POST">
   {% csrf_token %}
   {{form.as_p}}
-  <button type="submit" class="btn btn-light" style="width:170px;height:45px;font-size:20px;margin-left:130px;margin-top:10px;color:inherit;">Submit</button>
+  <button type="button" class="btn btn-light" style="width:170px;height:45px;font-size:20px;margin-left:130px;margin-top:10px;color:inherit;"> <a href="{% url 'login' %}">Submit</a></button>
 </form>
 
 				</div>
