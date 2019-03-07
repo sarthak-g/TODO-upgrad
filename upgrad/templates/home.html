@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'delete' %}"><h2>Delete All Completed</h2></a>
+<ul>
+{% for arti in object_list %}
+
+  <li>
+    <h2>{{ arti.title }}</h2>
+    <a href="{% url 'complete' arti.pk %}">Completed</a>
+    <a href="{% url 'article_edit' arti.pk %}">Edit this post</a>
+    <a href="{% url 'article_delete' arti.pk %}">Delete this post</a>
+  </li>
+
+{% endfor %}
+</ul>
+{% endblock content %}
