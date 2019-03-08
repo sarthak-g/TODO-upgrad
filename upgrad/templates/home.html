@@ -1,16 +1,60 @@
-{% extends 'base.html' %}
-{% block content %}
-<a href="{% url 'delete' %}"><h2>Delete All Completed</h2></a>
-<ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <!-- <button class="btn btn-outline-success" type="button" > <a href="{% url 'article_create' %}" style="text-decoration:none;"><h2>New Task</h2></a> </button>
+      <button class="btn btn-outline-success" type="button" > <a href="{% url 'delete' %}" style="text-decoration:none;font-size:5px;"><h2>Delete All Completed</h2></a> </button> -->
+
+      <a href="{% url 'article_create' %}" style="text-decoration:none;font-size:50px;" ><button type="button" class="btn btn-outline-success" style="width:200px;margin-left:20px;height:50px;">New Task</button></a>
+      <a href="{% url 'delete' %}" style="text-decoration:none;font-size:50px;" ><button type="button" class="btn btn-outline-success" style="width:200px;margin-left:20px;height:50px;">Delete All Completed</button></a>
+      <a href="{% url 'logout' %}" style="text-decoration:none;font-size:50px;" ><button type="button" class="btn btn-outline-success" style="width:200px;margin-left:20px;height:50px;">Log Out</button></a>
+
+
+    </form>
+  </nav>
+
+
+  <!-- <ul>
+  {% for arti in object_list %}
+
+    <li>
+      <h2>{{ arti.title }}</h2>
+      <a href="{% url 'complete' arti.pk %}">Completed</a>
+      <a href="{% url 'article_edit' arti.pk %}">Edit this post</a>
+      <a href="{% url 'article_delete' arti.pk %}">Delete this post</a>
+    </li>
+
+  {% endfor %}
+  </ul> -->
+
 {% for arti in object_list %}
+<div style="margin-left:20px;">
 
-  <li>
-    <h2>{{ arti.title }}</h2>
-    <a href="{% url 'complete' arti.pk %}">Completed</a>
-    <a href="{% url 'article_edit' arti.pk %}">Edit this post</a>
-    <a href="{% url 'article_delete' arti.pk %}">Delete this post</a>
-  </li>
+  <h1 style="font-size:40px;""> {{arti.title}} </h1>
+  <p>{{arti.content}}</p>
+  <p>Created on:- {{arti.created_time}}</p>
+  <p>Latest modified on:- {{arti.last_modified_time}}</p>
+  <p>Due date:- {{arti.due_date}}</p>
 
-{% endfor %}
-</ul>
-{% endblock content %}
+
+<a href="{% url 'article_edit' arti.pk %}"> <button type="button" class="btn btn-info">Edit/Complete</button></a>
+<a href="{% url 'article_delete' arti.pk %}"> <button type="button" class="btn btn-danger">Delete</button></a>
+</div>
+<br>
+  {% endfor %}
+
+
+
+</body>
+</html>
