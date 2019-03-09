@@ -4,7 +4,9 @@ To run this project
 Step 1: clone this project
 
 '''bash
+
 git clone https://github.com/sarthak-g/TODO-upgrad.git
+
 '''
 
 Step 2: Move inside the directory
