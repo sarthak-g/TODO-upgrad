@@ -13,3 +13,13 @@ cd upgrad
 Step 3: Run manage.py file
 
 python manage.py runserver
+
+**********************************************************
+
+* At the time of LogIn use these credentials:              *
+
+* Username: upgrad                                         *
+
+* Password: sarthak041                                     *
+
+**********************************************************
