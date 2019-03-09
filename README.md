@@ -16,10 +16,10 @@ python manage.py runserver
 
 **********************************************************
 
-* At the time of LogIn use these credentials:              *
+ At the time of LogIn use these credentials:              
 
-* Username: upgrad                                         *
+ Username: upgrad                                         
 
-* Password: sarthak041                                     *
+ Password: sarthak041                                     
 
 **********************************************************
